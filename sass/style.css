@@ -1,0 +1,99 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;700;900&display=swap");
+body {
+  background-color: #171717;
+  font-family: "Source Sans Pro", serif;
+  font-weight: 300;
+  color: #FFF;
+}
+body h1 {
+  font-size: 60px;
+}
+body h2 {
+  font-size: 44px;
+  font-weight: 300;
+  color: #707070;
+}
+body h2 .emphasis {
+  color: #5874FF;
+}
+body .spec {
+  margin-right: 30px;
+}
+body .emphasis {
+  font-weight: 700;
+}
+body .clanPlayers {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+body .clanPlayers .player {
+  max-width: 600px;
+  margin: auto;
+  font-size: 24px;
+  color: #FFF;
+  background-color: #303030;
+  margin: 1em 0;
+  padding: 15px 20px;
+  border-radius: 20px;
+  box-shadow: 10px 2px 12px rgba(0, 0, 0, 0.2);
+  display: grid;
+  grid-template-areas: "avatar title rank" "empty specs rank";
+  grid-template-columns: 50px auto 50px;
+  grid-template-rows: auto;
+  column-gap: 20px;
+  row-gap: 5px;
+  align-items: center;
+}
+body .clanPlayers .player > div {
+  display: flex;
+  flex-flow: row wrap;
+}
+body .clanPlayers .player > div.avatar {
+  grid-area: avatar;
+  width: 50px;
+  height: 50px;
+  background-color: #474747;
+  border-radius: 50px;
+}
+body .clanPlayers .player > div.title {
+  grid-area: title;
+}
+body .clanPlayers .player > div.title .playerName {
+  font-size: 32px;
+  font-weight: 700;
+  margin-right: 10px;
+}
+body .clanPlayers .player > div.title .playerTowerLevel {
+  font-size: 32px;
+  font-weight: 700;
+  color: #5874FF;
+}
+body .clanPlayers .player > div.rank {
+  grid-area: rank;
+  font-size: 32px;
+}
+body .clanPlayers .player > div.specs {
+  grid-area: specs;
+}
+body .clanPlayers .player > div.specs .playerCategory {
+  color: #FFD258;
+  font-weight: 700;
+}
+body .clanPlayers .player > div.specs .playerCategory.newbie {
+  color: #FFD258;
+}
+body .clanPlayers .player > div.specs .playerCategory.veteran {
+  color: #FF6363;
+}
+body .clanPlayers .player .label {
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #707070;
+  font-size: 14px;
+  letter-spacing: 1.5px;
+  width: 100%;
+  margin-bottom: -3px;
+}
+
+/*# sourceMappingURL=style.css.map */

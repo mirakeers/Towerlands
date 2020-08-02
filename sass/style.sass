@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;700;900&display=swap')
+$main_font: 'Source Sans Pro', serif
+$font_size_xxxl: 60px
+$font_size_xxl: 44px
+$font_size_xl: 32px
+$font_size_lg: 24px
+$font_size_md: 20px
+$font_size_sm: 18px
+$font_size_xs: 14px
+
+$blue: #5874FF
+$red: #FF6363
+$yellow: #FFD258
+$shade1: #171717
+$shade2: #303030
+$shade3: #474747
+$shade4: #474747
+$shade5: #707070
+$shade6: #C4C4C4
+$white: #FFF
+
+$main_shadow: 10px 2px 12px rgba(0,0,0,0.2)
+body
+  background-color: $shade1
+  font-family: $main_font
+  font-weight: 300
+  color: $white
+  h1
+    font-size: $font_size_xxxl
+  h2
+    font-size: $font_size_xxl
+    font-weight: 300
+    color: $shade5
+    .emphasis
+      color: $blue
+
+  .spec
+    margin-right: 30px
+  .emphasis
+    font-weight: 700
+
+  .clanPlayers
+    list-style: none
+    margin: 0
+    padding: 0
+    .player
+      max-width: 600px
+      margin: auto
+      font-size: $font_size_lg
+      color: $white
+      background-color: $shade2
+      margin: 1em 0
+      padding: 15px 20px
+      border-radius: 20px
+      box-shadow: $main_shadow
+      display: grid
+      grid-template-areas: "avatar title rank" "empty specs rank"
+      grid-template-columns: 50px auto 50px
+      grid-template-rows: auto
+      column-gap: 20px
+      row-gap: 5px
+      align-items: center
+      >div
+        display: flex
+        flex-flow: row wrap
+        &.avatar
+          grid-area: avatar
+          width: 50px
+          height: 50px
+          background-color: $shade4
+          border-radius: 50px
+        &.title
+          grid-area: title
+          .playerName
+            font-size: $font_size_xl
+            font-weight: 700
+            margin-right: 10px
+          .playerTowerLevel
+            font-size: $font_size_xl
+            font-weight: 700
+            color: $blue
+        &.rank
+          grid-area: rank
+          font-size: $font_size_xl
+        &.specs
+          grid-area: specs
+          .playerCategory
+            color: $yellow
+            font-weight: 700
+            &.newbie
+              color: $yellow
+            &.veteran
+              color: $red
+
+      .label
+        text-transform: uppercase
+        font-weight: 700
+        color: $shade5
+        font-size: $font_size_xs
+        letter-spacing: 1.5px
+        width: 100%
+        margin-bottom: -3px
+
